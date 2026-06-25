@@ -1,0 +1,19 @@
+Test accuracy: 0.9866
+
+                            precision    recall  f1-score   support
+
+            asakatsu_yasai     1.0000    1.0000    1.0000        15
+           bihidasu_yogurt     1.0000    1.0000    1.0000        12
+                 dodekamin     1.0000    1.0000    1.0000        10
+     ichinichibun_no_yasai     1.0000    1.0000    1.0000        15
+          ocha_lemon_green     1.0000    1.0000    1.0000        14
+           oi_ocha_koi_cha     1.0000    1.0000    1.0000        12
+          oi_ocha_ryokucha     1.0000    1.0000    1.0000        16
+ savas_milk_protein_banana     1.0000    1.0000    1.0000        16
+        savas_whey_protein     1.0000    1.0000    1.0000        17
+         zero_cider_triple     0.8333    1.0000    0.9091        10
+zero_cider_triple_plus_afa     1.0000    0.8333    0.9091        12
+
+                  accuracy                         0.9866       149
+                 macro avg     0.9848    0.9848    0.9835       149
+              weighted avg     0.9888    0.9866    0.9866       149
