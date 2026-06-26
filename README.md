@@ -309,13 +309,45 @@ Possible improvements:
 
 ---
 
+## Completed Extensions / 完成済みの拡張
+
+Beyond the basic training and inference workflow, this project includes the following completed extensions:
+
+基本的な学習・推論ワークフローに加えて、本プロジェクトでは以下の拡張も完了しています。
+
+### Jupyter Error Analysis / Jupyterによる誤分類分析
+
+- `notebooks/error_analysis.ipynb`
+
+This notebook loads the confusion matrix and test metrics, visualizes the classification results, and identifies misclassified class pairs. The main observed confusion was between visually similar product packages, especially `zero_cider_triple` and `zero_cider_triple_plus_afa`.
+
+このNotebookでは、confusion matrixとtest metricsを読み込み、分類結果を可視化し、誤分類されたクラスペアを確認します。主な誤分類は、パッケージが非常に似ている `zero_cider_triple` と `zero_cider_triple_plus_afa` の間で発生しました。
+
+### Google Colab GPU Workflow / Google Colab GPU学習ワークフロー
+
+- `notebooks/train_on_colab.ipynb`
+
+This notebook shows how the same training workflow can be moved from a local Mac environment to a cloud GPU environment. It includes Google Drive mounting, dependency installation, CUDA GPU checking, dataset validation, model training, model evaluation, and output file checking.
+
+このNotebookでは、ローカルMac環境で作成した学習ワークフローをGoogle ColabのクラウドGPU環境に移行する流れを示しています。Google Driveのマウント、依存パッケージのインストール、CUDA GPUの確認、データセット確認、モデル学習、モデル評価、出力ファイル確認までを含みます。
+
+Note: The full dataset and trained model weights are not included in this GitHub repository due to file size. To actually run the Colab workflow, the dataset should be placed in Google Drive.
+
+注意：データセット全体と学習済みモデルの重みは、ファイルサイズの都合によりGitHubには含めていません。Colabで実際に実行する場合は、データセットをGoogle Driveに配置する必要があります。
+
+### Basic Tests / 基本テスト
+
+- `tests/test_project_files.py`
+
+Basic pytest tests are included to check whether important project files, evaluation outputs, class definitions, and demo assets exist.
+
+主要なプロジェクトファイル、評価結果、クラス定義、デモ素材が存在するかを確認するための基本的なpytestテストを追加しています。
+
+
 ## Future Work
 
 Possible future improvements include:
 
-- Add Jupyter Notebook for detailed error analysis
-- Prepare Google Colab GPU training workflow
-- Add simple pytest checks for project files and class definitions
 - Add image quality checking using OpenCV
 - Containerize the environment using Docker or Podman
 - Extend inference workflow to AWS or GCP
@@ -323,9 +355,6 @@ Possible future improvements include:
 
 今後の改善案：
 
-- Jupyter Notebookによる詳細な誤分類分析
-- Google Colab GPUを用いた学習ワークフローの作成
-- pytestによる簡単なプロジェクトチェック
 - OpenCVによる画像品質チェック
 - DockerまたはPodmanによる環境のコンテナ化
 - AWSまたはGCPへの推論ワークフロー拡張
